@@ -1,0 +1,176 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color:rgb(37, 37, 37);
+    color: white;
+    overflow: hidden;
+}
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    opacity: 1;
+    background-color:rgb(37, 37, 37);
+    font-size: 10rem;
+    margin: 0;
+    line-height: 1;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-shadow: 0 0 10px rgba(255, 0, 255, 0.8), 0 0 20px rgba(0, 255, 255, 0.8);
+    animation: pulseGlow 3s infinite alternate;
+}
+.text-container {
+    margin-bottom: 10px;
+}
+.hero-title{
+    font-size: 10rem;
+    margin: 0;
+    line-height: 1;
+    opacity: 0;
+}
+@keyframes pulseGlow {
+    0% {
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(0, 255, 255, 0.8);
+    }
+    100% {
+        text-shadow: 0 0 15px rgb(255, 255, 255), 0 0 30px rgba(0, 255, 255, 1);
+    }
+}
+.hero-description {
+    font-size: 2rem;
+    opacity: 0;
+    transform: translateY(20px);
+}
+.loading {
+    font-size: 1.2rem;
+    margin-top: 5px; 
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    opacity: 0;
+    z-index: 1000 ; 
+}
+.navbar-logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+    font-weight:900;
+}
+.navbar-menu {
+    display: flex;
+    gap: 50px;
+    list-style: none;
+    margin-right: 10px;
+    padding-right: 30px;
+}
+.navbar-menu li {
+    color: white;
+    cursor: pointer;
+    font-family:Arial, Helvetica, sans-serif ;
+    font-size: 18px;
+}
+.hero-message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    opacity: 0;
+}
+
+.animated-text {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: white;
+    font-family: "Bebas Neue", sans-serif; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.2;
+}
+.animated-text span {
+    display: block;
+    opacity: 0;
+    transform: translateY(20px);
+}
+.center-text {
+    position: absolute;
+    top: 50% ; 
+    left: 50%;
+    display: none;
+    transform: translateY(-50px);
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column ; 
+    align-items: center;  
+    justify-content: center;  
+    gap: 25px; 
+    text-align: center;
+    width: 60%;
+    opacity: 0;
+    color: white;
+    font-size: 10rem;
+    font-weight: bolder;
+    text-transform: uppercase;
+    letter-spacing: 13px;
+    background-color:rgb(37, 37, 37); 
+    border-radius: 8px;
+    backdrop-filter: blur(5px); 
+}
+
+.center-text span {
+    opacity: 0;
+    transform: translateY(-50px); 
+}
+
+.animated-heading {
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 0 0 10px rgba(104, 3, 255, 0.5);
+    opacity: 1; 
+    width: 120%;
+    font-size: 5rem;
+    font-weight: bolder;
+    transition: text-shadow 0.3s ease-in-out;
+}
+.animated-heading:hover {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9), 0 0 30px rgba(0, 255, 255, 0.7);
+    cursor: pointer;
+}
+.center-text {
+    will-change: transform;
+}
+.corner-image {
+    position: absolute;
+    width: 260px;
+    height: 210px;
+    object-fit: cover;
+    position: absolute;
+    border-radius: 15px;
+    opacity: 0; 
+    transition: transform 0.1s ease-in-out;
+    mix-blend-mode: lighten;
+    cursor: pointer;
+
+}
+.corner-image:hover{
+    z-index: 1000;
+}
+
+.top-left { top: 5%; left: 5%; }
+.top-right { top: 5%; right: 5%; }
+.bottom-left { bottom: 5%; left: 5%; }
+.bottom-right { bottom: 5%; right: 5%; }
